@@ -1,0 +1,80 @@
+
+/* ========================================
+   LARGER SCREENS
+======================================== */
+
+@media only screen and (min-width: 38rem) {
+
+    /* HEADER */
+
+    .site-header {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 0.75rem 1.25rem;
+    }
+
+    .site-brand img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .hamburguer {
+        display: none;
+    }
+
+    /* NAVIGATION */
+
+    .navigation,
+    .navigation.show {
+        display: block;
+    }
+
+    .navigation ul {
+        flex-direction: row;
+    }
+
+    .navigation a {
+        border-bottom: none;
+    }
+
+    /* MAIN CONTENT */
+
+    main {
+        width: 100%;
+        max-width: 1200px;
+        padding: 1rem 1.25rem 2rem;
+    }
+
+    .sections {
+        grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+        gap: 1rem;
+        padding: 0;
+    }
+
+    .aboutMe {
+        grid-column: 1;
+    }
+
+    .photo {
+        grid-column: 2;
+    }
+
+    .courses {
+        grid-column: 1 / -1;
+    }
+
+    /* FOOTER */
+
+    .site-footer {
+        width: 100%;
+        max-width: 1200px;
+        padding: 1.25rem;
+    }
+}
+
+/* EXTRA-WIDE SCREENS */
+
+@media only screen and (min-width: 1400px) {
+    :root {
+        --content-width: 1320px;
+    }
+}
