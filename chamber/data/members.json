@@ -1,0 +1,85 @@
+
+{
+  "companies": [
+    {
+      "name": "Atlantic Digital Solutions",
+      "address": "Rua Miguel Pais 15, Barreiro, Portugal",
+      "phone": "+351 212 345 101",
+      "website": "https://www.atlanticdigital.pt",
+      "image": "atlantic-digital.jpg",
+      "membership": 3,
+      "category": "Technology",
+      "description": "Digital solutions, web development and IT consulting."
+    },
+    {
+      "name": "Setubal Fitness Club",
+      "address": "Avenida Luisa Todi 120, Setubal, Portugal",
+      "phone": "+351 265 345 202",
+      "website": "https://www.setubalfitness.pt",
+      "image": "setubal-fitness.jpg",
+      "membership": 2,
+      "category": "Health & Fitness",
+      "description": "Fitness centre offering personal training and group classes."
+    },
+    {
+      "name": "Green Market Portugal",
+      "address": "Rua da Liberdade 45, Moita, Portugal",
+      "phone": "+351 212 345 303",
+      "website": "https://www.greenmarket.pt",
+      "image": "green-market.jpg",
+      "membership": 1,
+      "category": "Retail",
+      "description": "Local grocery store specialising in fresh and organic products."
+    },
+    {
+      "name": "Lusitana Construction",
+      "address": "Rua Almirante Reis 78, Barreiro, Portugal",
+      "phone": "+351 212 345 404",
+      "website": "https://www.lusitanaconstruction.pt",
+      "image": "lusitana-construction.jpg",
+      "membership": 3,
+      "category": "Construction",
+      "description": "Construction, renovation and property maintenance services."
+    },
+    {
+      "name": "Coffee Corner",
+      "address": "Avenida Alfredo da Silva 32, Barreiro, Portugal",
+      "phone": "+351 212 345 505",
+      "website": "https://www.coffeecorner.pt",
+      "image": "coffee-corner.jpg",
+      "membership": 1,
+      "category": "Food & Beverage",
+      "description": "Specialty coffee shop serving coffee, pastries and light meals."
+    },
+    {
+      "name": "Ocean Travel Agency",
+      "address": "Rua dos Pescadores 18, Sesimbra, Portugal",
+      "phone": "+351 212 345 606",
+      "website": "https://www.oceantravel.pt",
+      "image": "ocean-travel.jpg",
+      "membership": 2,
+      "category": "Travel",
+      "description": "Travel agency offering holiday packages and guided tours."
+    },
+    {
+      "name": "Prime Auto Services",
+      "address": "Estrada Nacional 10, Coina, Portugal",
+      "phone": "+351 212 345 707",
+      "website": "https://www.primeautoservices.pt",
+      "image": "prime-auto.jpg",
+      "membership": 2,
+      "category": "Automotive",
+      "description": "Vehicle maintenance, repairs and automotive diagnostics."
+    },
+    {
+      "name": "Creative Studio Portugal",
+      "address": "Rua do Bocage 56, Setubal, Portugal",
+      "phone": "+351 265 345 808",
+      "website": "https://www.creativestudio.pt",
+      "image": "creative-studio.jpg",
+      "membership": 3,
+      "category": "Design & Marketing",
+      "description": "Brand identity, graphic design and digital marketing services."
+    }
+  ]
+}

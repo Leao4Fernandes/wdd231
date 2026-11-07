@@ -1,0 +1,226 @@
+/* ========================================
+    GENERAL
+======================================== */
+
+:root {
+    --color-primary: #c0aa00;
+    --color-primary-dark: #ffdd00;
+    --color-heading: #282727;
+    --color-background: #2f0000;
+    --color-surface: #b4b4b4;
+    --color-card: #e8e8e8;
+    --color-border: #000000;
+    --color-text: #242424;
+    --color-muted: #626262;
+
+    --content-width: 900px;
+    --card-radius: 4px;
+    --space-1: 0.5rem;
+    --space-2: 1rem;
+    --space-3: 1.5rem;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.site-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 44px;
+    align-items: center;
+    gap: var(--space-1);
+    margin: 0 auto;
+    padding: 0.5rem 0.75rem;
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.site-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    min-width: 0;
+    text-decoration: none;
+}
+
+.site-brand img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.site-brand span {
+    overflow-wrap: anywhere;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+/* ========================================
+    HAMBURGER BUTTON
+======================================== */
+
+.hamburguer {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    color: var(--color-text);
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.hamburguer::before {
+    content: "\2630";
+    font-size: 1.6rem;
+    line-height: 1;
+}
+
+.hamburguer.show::before {
+    content: "\00D7";
+    font-size: 2rem;
+}
+
+.hamburguer:hover {
+    background-color: var(--color-card);
+}
+
+/* ========================================
+    NAVIGATION
+======================================== */
+
+.navigation {
+    display: none;
+    margin: 0 auto;
+    background-color: var(--color-heading);
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navigation a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: 1px solid #454545;
+    transition: background-color 0.2s ease;
+}
+
+.navigation li.current a {
+    background-color: #444444;
+    font-weight: 600;
+}
+
+.navigation a:hover {
+    background-color: var(--color-primary-dark);
+}
+
+/* ========================================
+    CARDS
+======================================== */
+
+#cards {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#cards section {
+    background-color: white;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0.5rem;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+#cards img {
+    width: 120px;
+    height: 80px;
+    object-fit: contain;
+}
+
+#cards h2 {
+    font-size: 1.1rem;
+}
+
+#cards p,
+#cards a {
+    font-size: 0.85rem;
+}
+
+/* ========================================
+    FOOTER
+======================================== */
+
+
+footer {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 1rem 0.75rem;
+    background-color: var(--color-surface);
+    text-align: center;
+    border-top: 1px solid black;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.icons a {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.icons a:hover {
+    background-color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.icons img {
+    width: 22px;
+    height: 22px;
+}
+
+.copyright,
+.last-modified {
+    margin: 0.25rem 0;
+    font-size: 0.85rem;
+}
+
+.last-modified {
+    color: var(--color-muted);
+    font-size: 0.75rem;
+}
