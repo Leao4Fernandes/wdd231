@@ -76,3 +76,49 @@ filterButtons.forEach((filterButton) => {
         });
     });
 });
+const courseDetails = document.querySelector("#course-details");
+
+function displayCourseDetails(course) {
+    courseDetails.innerHTML = `
+        <button type="button" id="closeModal" aria-label="Close">❌</button>
+        <h2>${course.subject} ${course.number}</h2>
+        <h3>${course.title}</h3>
+        <p><strong>Credits</strong>: ${course.credits}</p>
+        <p><strong>Certificate</strong>: ${course.certificate}</p>
+        <p>${course.description}</p>
+        <p><strong>Technologies</strong>: ${course.technology.join(", ")}</p>
+    `;
+
+    courseDetails.showModal();
+
+    courseDetails.querySelector("#closeModal").addEventListener("click", () => {
+        courseDetails.close();
+    });
+}
+
+if (courseDetails) {
+    /* Close when clicking the dark backdrop outside the box */
+    courseDetails.addEventListener("click", (event) => {
+        if (event.target === courseDetails) {
+            courseDetails.close();
+        }
+    });
+
+    /* Give every course button its own click listener */
+    courseButtons.forEach((courseButton) => {
+        const label = courseButton.textContent.trim(); // e.g. "WDD 131"
+
+        const course = courses.find(
+            (c) => `${c.subject} ${c.number}` === label
+        );
+
+        if (course) {
+            courseButton.addEventListener("click", () => {
+                displayCourseDetails(course);
+            });
+        }
+    });
+}
+
+const wdd131Button = document.querySelector("#wdd131");
+displayCourseDetails(wdd131Button);

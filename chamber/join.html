@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Chamber | Membership Application</title>
+
+    <meta name="description"
+        content="Apply for chamber of commerce membership and compare the Non Profit, Bronze, Silver, and Gold membership levels and their benefits.">
+    <meta name="author" content="Leão Fernandes">
+
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/base.css">
+    <link rel="stylesheet" href="./styles/larger.css">
+    <link rel="stylesheet" href="./styles/join.css">
+    <script src="./scripts/base.js" defer></script>
+    <script src="./scripts/join.js" type="module"></script>
+
+    <meta property="og:title" content="Join the Chamber of Commerce">
+    <meta property="og:description" content="Apply for membership and grow your business with the chamber of commerce.">
+    <meta property="og:image" content="https://exemplo.com">
+    <meta property="og:url" content="https://exemplo.com">
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="site-brand" href="./index.html" aria-label="Home">
+            <img
+                src="./images/home.svg"
+                alt=""
+                width="24"
+                height="24"
+            >
+            <span>Leão Fernandes</span>
+        </a>
+
+        <button
+            id="ham-btn"
+            class="hamburguer"
+            type="button"
+            aria-label="Toggle navigation"
+            aria-controls="nav-bar"
+            aria-expanded="false"
+        ></button>
+    </header>
+
+    <nav id="nav-bar" class="navigation" aria-label="Main navigation">
+        <ul>
+            <li>
+                <a href="./index.html">Home</a>
+            </li>
+            <li>
+                <a href="./directory.html">Directory</a>
+            </li>
+            <li class="current">
+                <a href="./join.html" aria-current="page">Join</a>
+            </li>
+            <li>
+                <a href="./discover.html">Discover</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="join-page">
+        <h1>Become a Member</h1>
+        <p class="join-intro">Fill out the application below to join our chamber. Required fields are marked with <span class="req" aria-hidden="true">*</span>.</p>
+
+        <div class="join-layout">
+            <form class="join-form" action="thankyou.html" method="get">
+                <fieldset>
+                    <legend>Applicant Information</legend>
+
+                    <label>First Name <span class="req" aria-hidden="true">*</span>
+                        <input type="text" name="first" title="Enter your first name" autocomplete="given-name" required>
+                    </label>
+
+                    <label>Last Name <span class="req" aria-hidden="true">*</span>
+                        <input type="text" name="last" title="Enter your last name" autocomplete="family-name" required>
+                    </label>
+
+                    <label>Organizational Title
+                        <input type="text" name="orgtitle"
+                            title="Letters, hyphens, and spaces only, at least 7 characters"
+                            autocomplete="organization-title"
+                            pattern="[A-Za-z\- ]{7,}">
+                    </label>
+
+                    <label>Email <span class="req" aria-hidden="true">*</span>
+                        <input type="email" name="email" title="Enter a valid email address" autocomplete="email" placeholder="name@example.com" required>
+                    </label>
+
+                    <label>Mobile Phone <span class="req" aria-hidden="true">*</span>
+                        <input type="tel" name="phone" title="Enter your mobile phone number" autocomplete="tel" required>
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Business Information</legend>
+
+                    <label>Business / Organization Name <span class="req" aria-hidden="true">*</span>
+                        <input type="text" name="organization" title="Enter your business or organization name" autocomplete="organization" required>
+                    </label>
+
+                    <label>Membership Level
+                        <select name="membership" title="Choose a membership level">
+                            <option value="np">NP Membership (Non Profit, no fee)</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold" selected>Gold Membership</option>
+                        </select>
+                    </label>
+
+                    <label>Business Description
+                        <textarea name="description" rows="4" title="Briefly describe your business or organization"></textarea>
+                    </label>
+                </fieldset>
+
+                <input type="hidden" name="timestamp" id="timestamp">
+
+                <input type="submit" value="Submit Application" class="submit-btn">
+            </form>
+
+            <section class="membership-cards" aria-labelledby="levels-heading">
+                <h2 id="levels-heading">Membership Levels</h2>
+
+                <article class="membership-card np">
+                    <h3>NP Membership</h3>
+                    <p class="price">Free for non profits</p>
+                    <a href="#" data-modal="modal-np">Learn more</a>
+                </article>
+
+                <article class="membership-card bronze">
+                    <h3>Bronze Membership</h3>
+                    <p class="price">€100 / year</p>
+                    <a href="#" data-modal="modal-bronze">Learn more</a>
+                </article>
+
+                <article class="membership-card silver">
+                    <h3>Silver Membership</h3>
+                    <p class="price">€250 / year</p>
+                    <a href="#" data-modal="modal-silver">Learn more</a>
+                </article>
+
+                <article class="membership-card gold">
+                    <h3>Gold Membership</h3>
+                    <p class="price">€500 / year</p>
+                    <a href="#" data-modal="modal-gold">Learn more</a>
+                </article>
+            </section>
+        </div>
+
+        <dialog id="modal-np" aria-labelledby="modal-np-title">
+            <h2 id="modal-np-title">NP Membership Benefits</h2>
+            <p class="price">No fee for non profit organizations</p>
+            <ul>
+                <li>Listing in the chamber business directory</li>
+                <li>Monthly chamber newsletter</li>
+                <li>Invitations to community networking events</li>
+            </ul>
+            <button type="button" class="close-modal">Close</button>
+        </dialog>
+
+        <dialog id="modal-bronze" aria-labelledby="modal-bronze-title">
+            <h2 id="modal-bronze-title">Bronze Membership Benefits</h2>
+            <p class="price">€100 per year</p>
+            <ul>
+                <li>All NP benefits</li>
+                <li>10% discount on chamber events</li>
+                <li>Access to quarterly business training workshops</li>
+            </ul>
+            <button type="button" class="close-modal">Close</button>
+        </dialog>
+
+        <dialog id="modal-silver" aria-labelledby="modal-silver-title">
+            <h2 id="modal-silver-title">Silver Membership Benefits</h2>
+            <p class="price">€250 per year</p>
+            <ul>
+                <li>All Bronze benefits</li>
+                <li>20% discount on chamber events</li>
+                <li>Chance of a spotlight position on the home page</li>
+                <li>One social media feature per quarter</li>
+            </ul>
+            <button type="button" class="close-modal">Close</button>
+        </dialog>
+
+        <dialog id="modal-gold" aria-labelledby="modal-gold-title">
+            <h2 id="modal-gold-title">Gold Membership Benefits</h2>
+            <p class="price">€500 per year</p>
+            <ul>
+                <li>All Silver benefits</li>
+                <li>Priority spotlight position on the home page</li>
+                <li>Free entry to all chamber events and training</li>
+                <li>Featured advertising in the monthly newsletter</li>
+                <li>Booth at the annual business expo</li>
+            </ul>
+            <button type="button" class="close-modal">Close</button>
+        </dialog>
+    </main>
+
+    <footer>
+
+        <div class="icons">
+            <a href="#" aria-label="LinkedIn profile">
+                <img src="./images/linkedin.svg" alt="" width="22" height="22">
+            </a>
+
+            <a href="#" aria-label="GitHub profile">
+                <img src="./images/github.svg" alt="" width="22" height="22">
+            </a>
+
+            <a href="#" aria-label="Facebook profile">
+                <img src="./images/facebook.svg" alt="" width="22" height="22">
+            </a>
+        </div>
+
+        <p class="copyright">
+            © <span id="currentyear"></span>
+            Leão Fernandes | Portugal
+        </p>
+
+        <p id="lastModified" class="last-modified"></p>
+
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,248 @@
+/* ========================================
+    JOIN + THANK YOU PAGES
+    Uses the colour variables from base.css
+======================================== */
+
+.join-page,
+.thankyou-page {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: var(--space-2);
+}
+
+.join-page h1,
+.thankyou-page h1 {
+    margin-bottom: var(--space-1);
+    font-size: 1.6rem;
+    color: var(--color-heading);
+}
+
+.join-intro,
+.thankyou-page > p {
+    margin-bottom: var(--space-3);
+}
+
+.req {
+    color: #b00020;
+}
+
+/* Small screens: form first, cards below */
+.join-layout {
+    display: grid;
+    gap: var(--space-3);
+}
+
+/* ----- Form: one column, labels above fields ----- */
+.join-form fieldset {
+    margin-bottom: var(--space-2);
+    padding: var(--space-2);
+    border: 1px solid var(--color-surface);
+    border-radius: var(--card-radius);
+}
+
+.join-form legend {
+    padding: 0 var(--space-1);
+    font-weight: 700;
+    color: var(--color-heading);
+}
+
+.join-form label {
+    display: block;
+    margin-bottom: var(--space-2);
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.join-form input:not([type="submit"]),
+.join-form select,
+.join-form textarea {
+    display: block;
+    width: 100%;
+    margin-top: 0.3rem;
+    padding: 0.6rem;
+    font: inherit;
+    font-weight: 400;
+    border: 1px solid var(--color-muted);
+    border-radius: var(--card-radius);
+}
+
+.join-form input:focus,
+.join-form select:focus,
+.join-form textarea:focus {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 1px;
+}
+
+/* Red border only after the user has interacted with the field */
+.join-form input:user-invalid {
+    border: 2px solid #b00020;
+}
+
+.submit-btn,
+.close-modal {
+    font: inherit;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: var(--color-heading);
+    border: none;
+    border-radius: var(--card-radius);
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 0.8rem;
+}
+
+.close-modal {
+    padding: 0.5rem 1.2rem;
+}
+
+.submit-btn:hover,
+.submit-btn:focus-visible,
+.close-modal:hover,
+.close-modal:focus-visible {
+    color: var(--color-text);
+    background-color: var(--color-primary-dark);
+}
+
+/* ----- Membership cards ----- */
+.membership-cards h2 {
+    margin-bottom: var(--space-2);
+    font-size: 1.25rem;
+    color: var(--color-heading);
+}
+
+.membership-card {
+    margin-bottom: var(--space-2);
+    padding: var(--space-2);
+    background-color: #ffffff;
+    border-left: 8px solid var(--color-heading);
+    border-radius: var(--card-radius);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    /* Initial page-load animation */
+    opacity: 0;
+    animation: card-in 0.8s ease-out forwards;
+}
+
+.membership-card h3 {
+    margin-bottom: 0.3rem;
+}
+
+.membership-card .price {
+    margin-bottom: var(--space-1);
+    color: var(--color-muted);
+}
+
+.membership-card a {
+    font-weight: 700;
+    color: var(--color-heading);
+}
+
+.membership-card.np { border-left-color: #2a7d6f; }
+.membership-card.bronze { border-left-color: #8c5a2b; }
+.membership-card.silver { border-left-color: #8a8a8a; }
+.membership-card.gold { border-left-color: var(--color-primary); }
+
+/* Cards appear one after another */
+.membership-card:nth-of-type(1) { animation-delay: 0.2s; }
+.membership-card:nth-of-type(2) { animation-delay: 0.5s; }
+.membership-card:nth-of-type(3) { animation-delay: 0.8s; }
+.membership-card:nth-of-type(4) { animation-delay: 1.1s; }
+
+@keyframes card-in {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .membership-card {
+        animation: none;
+        opacity: 1;
+    }
+}
+
+/* ----- Modals ----- */
+dialog {
+    width: min(90%, 500px);
+    margin: auto;
+    padding: var(--space-3);
+    color: var(--color-text);
+    border: none;
+    border-top: 8px solid var(--color-primary);
+    border-radius: var(--card-radius);
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+dialog h2 {
+    margin-bottom: var(--space-1);
+    color: var(--color-heading);
+}
+
+dialog .price {
+    margin-bottom: var(--space-1);
+    font-weight: 700;
+}
+
+dialog ul {
+    margin: 0 0 var(--space-2) var(--space-3);
+}
+
+dialog li {
+    margin-bottom: 0.3rem;
+}
+
+/* ----- Thank you page ----- */
+.results dl {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin-bottom: var(--space-3);
+    padding: var(--space-2);
+    background-color: var(--color-card);
+    border-radius: var(--card-radius);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.results dt {
+    margin-top: 0.6rem;
+    font-weight: 700;
+    color: var(--color-heading);
+}
+
+.results dd {
+    overflow-wrap: anywhere;
+}
+
+.back-link {
+    font-weight: 700;
+    color: var(--color-heading);
+}
+
+/* ----- Larger screens: cards to the right of the form ----- */
+@media (min-width: 48rem) {
+    .join-layout {
+        grid-template-columns: 2fr 1fr;
+        align-items: start;
+    }
+
+    .results dl {
+        grid-template-columns: max-content 1fr;
+        gap: 0.6rem 1.5rem;
+    }
+
+    .results dt {
+        margin-top: 0;
+    }
+}

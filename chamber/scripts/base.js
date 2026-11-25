@@ -109,4 +109,7 @@ const displayData = (companies) => {
     });
 };
 
-getDocumentData();
+// Only load the directory cards on pages that have the #cards container
+if (cards) {
+    getDocumentData();
+}

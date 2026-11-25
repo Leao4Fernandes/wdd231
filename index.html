@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,10 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Course Home Page | Leão Fernandes</title>
-    <meta
-        name="description"
-        content="Explore Leão Fernandes's web development coursework, projects, and student portfolio."
-    >
+    <meta name="description"
+        content="Explore Leão Fernandes's web development coursework, projects, and student portfolio.">
     <meta name="author" content="Leão Fernandes">
 
     <link rel="stylesheet" href="./styles/normalize.css">
@@ -20,10 +17,12 @@
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
 
     <meta property="og:title" content="Apple">
-    <meta property="og:description" content="Discover the innovative world of Apple and shop everything iPhone, iPad, Apple Watch, Mac, and Apple TV, plus explore accessories, entertainment, and expert device support.">
+    <meta property="og:description"
+        content="Discover the innovative world of Apple and shop everything iPhone, iPad, Apple Watch, Mac, and Apple TV, plus explore accessories, entertainment, and expert device support.">
     <meta property="og:url" content="https://www.apple.com/">
     <meta property="og:locale" content="en_US">
-    <meta property="og:image" content="https://www.apple.com/ac/structured-data/images/open_graph_logo.png?202110180743">
+    <meta property="og:image"
+        content="https://www.apple.com/ac/structured-data/images/open_graph_logo.png?202110180743">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Apple">
 
@@ -33,23 +32,12 @@
 <body>
     <header class="site-header">
         <a class="site-brand" href="./index.html" aria-label="Home">
-            <img
-                src="./images/home.svg"
-                alt=""
-                width="512"
-                height="512"
-            >
+            <img src="./images/home.svg" alt="" width="512" height="512">
             <span>Leão Fernandes</span>
         </a>
 
-        <button
-            id="ham-btn"
-            class="hamburguer"
-            type="button"
-            aria-label="Toggle navigation"
-            aria-controls="nav-bar"
-            aria-expanded="false"
-        ></button>
+        <button id="ham-btn" class="hamburguer" type="button" aria-label="Toggle navigation" aria-controls="nav-bar"
+            aria-expanded="false"></button>
     </header>
 
     <nav id="nav-bar" class="navigation" aria-label="Main navigation">
@@ -91,12 +79,7 @@
                 <h2>Student Photo</h2>
 
                 <div class="photo-content">
-                    <img
-                        src="./images/profile.png"
-                        alt="Portrait of Leão Fernandes"
-                        width="300"
-                        height="300"
-                    >
+                    <img src="./images/profile.png" alt="Portrait of Leão Fernandes" width="300" height="300">
                 </div>
             </section>
 
@@ -105,24 +88,11 @@
 
                 <div class="course-content">
                     <div class="course-filters">
-                        <button
-                            type="button"
-                            class="active"
-                            data-filter="all"
-                            aria-pressed="true"
-                        >All</button>
+                        <button type="button" class="active" data-filter="all" aria-pressed="true">All</button>
 
-                        <button
-                            type="button"
-                            data-filter="cse"
-                            aria-pressed="false"
-                        >CSE</button>
+                        <button type="button" data-filter="cse" aria-pressed="false">CSE</button>
 
-                        <button
-                            type="button"
-                            data-filter="wdd"
-                            aria-pressed="false"
-                        >WDD</button>
+                        <button type="button" data-filter="wdd" aria-pressed="false">WDD</button>
                     </div>
 
                     <div class="course-list">
@@ -130,7 +100,7 @@
                             WDD 130
                         </button>
 
-                        <button type="button" data-category="wdd">
+                        <button type="button"  id="wdd131" data-category="wdd">
                             WDD 131
                         </button>
 
@@ -146,6 +116,8 @@
             </section>
 
         </div>
+        <dialog id="course-details">
+        </dialog>l
     </main>
 
     <footer class="site-footer">
